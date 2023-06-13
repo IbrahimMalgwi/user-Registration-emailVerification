@@ -1,6 +1,5 @@
 package com.ganzymalgwi.userRegistration.data.model.user;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +25,5 @@ public class User {
     private String email;
     private String password;
     private String role;
-
     private boolean isEnabled = false;
 }
