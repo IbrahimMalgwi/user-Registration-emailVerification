@@ -1,9 +1,11 @@
-package com.ganzymalgwi.userregistrationemailverification.service;
+package com.ganzymalgwi.userRegistration.service;
 
-import com.ganzymalgwi.userregistrationemailverification.data.dto.request.RegistrationRequest;
-import com.ganzymalgwi.userregistrationemailverification.data.model.user.User;
-import com.ganzymalgwi.userregistrationemailverification.data.repository.UserRepository;
-import com.ganzymalgwi.userregistrationemailverification.execption.UserAlreadyExistException;
+import com.ganzymalgwi.userRegistration.data.dto.request.RegistrationRequest;
+import com.ganzymalgwi.userRegistration.data.model.token.VerificationToken;
+import com.ganzymalgwi.userRegistration.data.model.user.User;
+import com.ganzymalgwi.userRegistration.data.repository.UserRepository;
+import com.ganzymalgwi.userRegistration.data.repository.VerificationTokenRepository;
+import com.ganzymalgwi.userRegistration.execption.UserAlreadyExistException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,7 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService{
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final VerificationTokenRepository verificationTokenRepository;
     @Override
     public List<User> getUsers() {
         return userRepository.findAll();
@@ -40,5 +43,11 @@ public class UserServiceImpl implements UserService{
     @Override
     public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public void saveUserVerificationToken(User user, String token) {
+        var verificationToken = new VerificationToken(token, user);
+        verificationTokenRepository.save(verificationToken);
     }
 }

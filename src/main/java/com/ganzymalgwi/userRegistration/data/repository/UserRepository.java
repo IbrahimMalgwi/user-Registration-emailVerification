@@ -1,6 +1,6 @@
-package com.ganzymalgwi.userregistrationemailverification.data.repository;
+package com.ganzymalgwi.userRegistration.data.repository;
 
-import com.ganzymalgwi.userregistrationemailverification.data.model.user.User;
+import com.ganzymalgwi.userRegistration.data.model.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

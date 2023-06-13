@@ -1,4 +1,4 @@
-package com.ganzymalgwi.userregistrationemailverification.data.dto.request;
+package com.ganzymalgwi.userRegistration.data.dto.request;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

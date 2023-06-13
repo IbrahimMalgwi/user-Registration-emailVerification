@@ -1,6 +1,6 @@
-package com.ganzymalgwi.userregistrationemailverification.data.model.token;
+package com.ganzymalgwi.userRegistration.data.model.token;
 
-import com.ganzymalgwi.userregistrationemailverification.data.model.user.User;
+import com.ganzymalgwi.userRegistration.data.model.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

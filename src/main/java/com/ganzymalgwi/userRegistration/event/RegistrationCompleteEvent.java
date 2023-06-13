@@ -1,6 +1,6 @@
-package com.ganzymalgwi.userregistrationemailverification.event;
+package com.ganzymalgwi.userRegistration.event;
 
-import com.ganzymalgwi.userregistrationemailverification.data.model.user.User;
+import com.ganzymalgwi.userRegistration.data.model.user.User;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.context.ApplicationEvent;

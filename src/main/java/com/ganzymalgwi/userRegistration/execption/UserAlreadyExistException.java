@@ -1,4 +1,4 @@
-package com.ganzymalgwi.userregistrationemailverification.execption;
+package com.ganzymalgwi.userRegistration.execption;
 
 public class UserAlreadyExistException extends RuntimeException {
     public UserAlreadyExistException(String message) {

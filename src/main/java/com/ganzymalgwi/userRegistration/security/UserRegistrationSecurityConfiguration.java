@@ -1,4 +1,4 @@
-package com.ganzymalgwi.userregistrationemailverification.security;
+package com.ganzymalgwi.userRegistration.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

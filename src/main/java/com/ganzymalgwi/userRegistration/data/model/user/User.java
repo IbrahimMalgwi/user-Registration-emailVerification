@@ -1,4 +1,4 @@
-package com.ganzymalgwi.userregistrationemailverification.data.model.user;
+package com.ganzymalgwi.userRegistration.data.model.user;
 
 
 import jakarta.persistence.Entity;

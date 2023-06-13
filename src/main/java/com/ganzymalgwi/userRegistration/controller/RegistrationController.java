@@ -1,9 +1,9 @@
-package com.ganzymalgwi.userregistrationemailverification.controller;
+package com.ganzymalgwi.userRegistration.controller;
 
-import com.ganzymalgwi.userregistrationemailverification.data.dto.request.RegistrationRequest;
-import com.ganzymalgwi.userregistrationemailverification.data.model.user.User;
-import com.ganzymalgwi.userregistrationemailverification.event.RegistrationCompleteEvent;
-import com.ganzymalgwi.userregistrationemailverification.service.UserService;
+import com.ganzymalgwi.userRegistration.data.dto.request.RegistrationRequest;
+import com.ganzymalgwi.userRegistration.data.model.user.User;
+import com.ganzymalgwi.userRegistration.event.RegistrationCompleteEvent;
+import com.ganzymalgwi.userRegistration.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
@@ -28,8 +28,6 @@ public class RegistrationController {
                 user, applicationUrl(request)));
         return "Registration Successful! Check your emil to confirm your email";
     }
-
-
 
     public String applicationUrl(HttpServletRequest request) {
         return "http://"+request.getServerName()+"+"
